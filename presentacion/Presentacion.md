@@ -1,11 +1,10 @@
 ---
 marp        : true
-size        : 4:3
-# auto-scaling:
-#     - true
-#     - fittingHeader
-#     - math
-#     - code
+auto-scaling:
+    - true
+    - fittingHeader
+    - math
+    - code
 paginate    : true
 theme       : hegel
 title       : Base de Datos I

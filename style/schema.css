@@ -5,12 +5,12 @@
 /* -------------------- ROOT ----------------------------------*/
 :root {
     --h1-color                  : black;
-    --border-color              : #e99211;
+    --border-color              : #1867b7;
 
 
-    --bold-color                : rgb(175, 56, 20);
-    --italic-color              : black;
-    --italic-background-color   : rgba(255, 210, 8, 0.713);
+    --bold-color                : #1867b7;
+    --italic-color              : white;
+    --italic-background-color   : rgb(3, 116, 221);
 
     --background-color          : #fdf6e3;
     --list-item-color           : rgb(50, 56, 56);
@@ -32,7 +32,7 @@
 
 /* -------------------- TRANSITION ---------------------------------*/
 section.transition {
-    --transitionpage-color  : orangered;
+    --transitionpage-color  : rgb(3, 116, 221);
 }
 
 /* -------------------- BIBLIO -------------------------------*/
@@ -73,7 +73,7 @@ section.titlepage {
     --border-color      : #b5c9ee;
     --border-color      : #8aa6da;
     --border-color      : #6c71c4;
-    --border-color      : #e99211;
+    --border-color      : #1867b7;
 
 }
 
