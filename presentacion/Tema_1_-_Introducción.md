@@ -43,6 +43,8 @@ description : Tema 1. Introducción
 <div class="date">Curso 2021/2022</div>
 <div class="organization">Departamento de Sistemas Informáticos</div>
 
+[![height:30](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-informational.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 ---
 
 # ¿Qué son los datos?
