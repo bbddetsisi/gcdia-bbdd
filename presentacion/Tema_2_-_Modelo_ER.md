@@ -9,7 +9,7 @@ paginate    : true
 theme       : hegel
 title       : Base de Datos I
 author      : Raúl Lara Cabrera
-description : Tema 2. Diseño conceptual y paso al diseño lógico
+description : Tema 2. Diseño conceptual
 ---
 <style>
 
@@ -38,7 +38,7 @@ description : Tema 2. Diseño conceptual y paso al diseño lógico
 ![bg left:33%](https://images.unsplash.com/photo-1582547766135-5940c6d3b50d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
 
 <div class="title">Tema 2</div>
-<div class="subtitle">Diseño conceptual y paso al diseño lógico</div>
+<div class="subtitle">Diseño conceptual</div>
 <div class="author">Grado en Ciencia de Datos e Inteligencia Artificial</div>
 <div class="date">Curso 2021/2022</div>
 <div class="organization">Departamento de Sistemas Informáticos</div>
