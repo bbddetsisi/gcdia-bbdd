@@ -9,7 +9,7 @@ paginate    : true
 theme       : hegel
 title       : Base de Datos I
 author      : Raúl Lara Cabrera
-description : Tema 2. Diseño conceptual y paso al diseño lógico
+description : Tema 3. Modelo Relacional
 ---
 <style>
 
