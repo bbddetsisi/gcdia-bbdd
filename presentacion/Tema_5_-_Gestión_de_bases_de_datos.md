@@ -9,7 +9,7 @@ paginate    : true
 theme       : hegel
 title       : Base de Datos I
 author      : Raúl Lara Cabrera
-description : Tema 4. El lenguaje SQL
+description : Tema 5. Gestión de bases de datos
 math        : mathjax
 ---
 <style>
