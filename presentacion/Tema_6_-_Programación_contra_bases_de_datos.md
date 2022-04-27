@@ -204,6 +204,7 @@ SQLAlchemy es el conjunto de herramientas SQL de Python y un ORM$^1$ que ofrece 
 Proporciona un conjunto completo de patrones de persistencia de nivel empresarial bien conocidos, diseñados para un acceso a la base de datos eficiente y de alto rendimiento, adaptados a un lenguaje de dominio sencillo y pitónico.
 
 Para instalar:
+
 ```bash
 pip install sqlalchemy pymysql
 ```
@@ -324,8 +325,8 @@ Nuestros modelos **deben** extender la clase `Base`.
 Empezamos nuestros modelos con los *Usuarios*:
 
 ```python
-from sqlalchemy import Column, Table
-from sqlalchemy.types import Integer, String, DateTime, ForeignKey
+from sqlalchemy import Column, Table, ForeignKey
+from sqlalchemy.types import Integer, String, DateTime
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 
@@ -358,7 +359,7 @@ class Serie(Base):
    fecha_alta = Column(DateTime, server_default=func.now())
 
    def __repr__(self):
-      return f"<Película '{titulo}'>"
+      return f"<Serie '{self.titulo}'>"
 ```
 
 ---
@@ -376,10 +377,10 @@ class Capitulo(Base):
    duracion = Column(Integer, nullable=False)
    id_serie = Column(Integer, ForeignKey("series.id")) # Referencia a nombre de tabla
 
-   serie = Relationship("Serie", backref="capitulos") # Referencia a nombre de la clase
+   serie = relationship("Serie", backref="capitulos") # Referencia a nombre de la clase
 
    def __repr__(self):
-      return f"<Capítulo '{titulo}' ({serie})>"
+      return f"<Capítulo '{self.titulo}' ({self.serie})>"
 ```
 
 ---
@@ -398,7 +399,7 @@ tabla_asoc = Table('visualiza', Base.metadata,
 Ahora solo queda añadir las relaciones a los modelos **Usuario**:
 
 ```python
-   capitulos = Relationship("Capitulo", secondary=tabla_asoc, backref="usuarios")
+   capitulos = relationship("Capitulo", secondary=tabla_asoc, backref="usuarios")
 ```
 
 ---
@@ -477,7 +478,7 @@ Recordemos que nuestro modelo `Usuario` disponía de un atributo `capitulos` vin
 Para decir que un usuario ha visto un capítulo en concreto, basta con añadir la instancia del capítulo a este atributo:
 
 ```python
-u1.capitulos.add(s01e01)
+u1.capitulos.append(s01e01)
 session.commit()
 ```
 
@@ -491,8 +492,8 @@ Por ejemplo, podemos obtener todos los capítulos de la base de datos:
 
 ```python
 caps = session
-   .query(Capitulos) # FROM Capitulos
-   .all()            # SELECT *
+   .query(Capitulo) # FROM Capitulos
+   .all()           # SELECT *
 ```
 
 La variable `caps` contendrá una colección de instancias de capítulos:
