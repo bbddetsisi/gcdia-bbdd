@@ -152,7 +152,7 @@ Para conectarnos a una base de datos **MySQL** mediante el protocolo ODBC es nec
 
 Este driver será dependiende del sistema operativo desde el cual nos queramos conectar al sistema gestor de bases de datos y, por tanto, su [instalación](https://dev.mysql.com/doc/connector-odbc/en/) es diferente para cada SO.
 
-Aunque usemos una librería específica de Python para conectarnos (**puodbc**), esta se basa en el conector oficial de **MySQL** para funcionar.
+Aunque usemos una librería específica de Python para conectarnos (**pyodbc**), esta se basa en el conector oficial de **MySQL** para funcionar.
 
 ---
 
